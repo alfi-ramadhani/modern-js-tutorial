@@ -4,7 +4,7 @@
 
 Learn fundamentals of JS from the beginning.
 
-Source :
+_Source :_
 [Brad Traversy](https://github.com/bradtraversy) (Instructor), 
 [Udemy - Modern JavaScript From The Beginning
 ](https://www.udemy.com/course/modern-javascript-from-the-beginning/) Course
