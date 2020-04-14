@@ -5,33 +5,24 @@ const people = [
 ];
 
 for(let i = 0; i < people.length; i++){
-  console.log(people[i].name);
+  console.log(`${people[i].name} ${people[i].age}`);
 }
 
-let day;
+const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 
-switch(new Date().getDay()){
-  case 0:
-    day = 'Sunday';
-    break;
-  case 1:
-    day = 'Monday';
-    break;
-  case 2:
-    day = 'Tuesday';
-    break;
-  case 3:
-    day = 'Wednesday';
-    break;
-  case 4:
-    day = 'Thursday';
-    break;
-  case 5:
-    day = 'Friday';
-    break;
-  case 6:
-    day = 'Saturday';
-    break;
+for(let i = 0; i < cars.length; i++){
+  console.log(cars[i]);
 }
 
-console.log(`Today is ${day}`);
+// cars.forEach(function(car){
+//   console.log(car);
+// }); // use callback/ self-calling function
+
+cars.forEach(function(car, index, array){
+  console.log(`${index} : ${car}`);
+  console.log(array);
+});
+
+val = window.navigator.geolocation;
+
+console.log(val);

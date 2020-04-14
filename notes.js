@@ -20,7 +20,7 @@ console.timeEnd('Hello');
     sdsfnksdf
   */
 
-  // 02 var, let, const
+  // 02 var, let, const - - - - - - - - - - - - - - - - - -
 let firstName; // Camel case - regular variables
 let first_name; // underscore
 let FirstName; // Pascal case - constructor / class
@@ -49,7 +49,7 @@ console.log(person.name);
 // JS - Dynamically typed language (not statically type : C, Java)
 // TS - superset of JS, can use static type
 
-// 04 Numbers & Math Object
+// 04 Numbers & Math Object - - - - - - - - - - - - - - - - - -
 const name = 'John Doe';
 console.log(typeof name);
 console.log(name);
@@ -91,7 +91,7 @@ val = Math.floor(Math.random() * 20 + 1);
 
 console.log(val);
 
-// 05 String Methods
+// 05 String Methods - - - - - - - - - - - - - - - - - -
 const firstName = 'William';
 const lastName = 'Johnson';
 const age = 36;
@@ -151,7 +151,7 @@ val = str.includes('foo');
 
 console.log(val);
 
-// 06 Template Literals
+// 06 Template Literals - - - - - - - - - - - - - - - - - -
 const name = 'Zainal';
 const age = 28;
 const job = 'Web Developer';
@@ -187,7 +187,7 @@ html = `
 
 document.body.innerHTML = html;
 
-// 12 Array Methods
+// 12 Array Methods - - - - - - - - - - - - - - - - - -
 // Create some arrays
 const numbers = [43,56,33,23,44,36,5];
 const numbers2 = new Array(43,56,33,23,44,36,5); // using constructor
@@ -240,7 +240,7 @@ val = numbers.find(over50);
 console.log(numbers);
 console.log(val);
 
-// 13 Object literals
+// 13 Object literals - - - - - - - - - - - - - - - - - -
 const person = {
   firstName: 'Steve',
   lastName: 'Smith',
@@ -280,7 +280,7 @@ for(let i = 0; i < people.length; i++){
   console.log(people[i].name);
 }
 
-// Time & Date Object
+// Time & Date Object - - - - - - - - - - - - - - - - - -
 let val;
 
 const today = new Date();
@@ -307,7 +307,7 @@ birthday.setSeconds(25);
 
 console.log(birthday);
 
-// 015 If Statements  Comparison Operators
+// 015 If Statements  Comparison Operators - - - - - - - - - - - - - - - - - -
 
 const id = 100;
 
@@ -353,7 +353,7 @@ if(id <= 100){
   console.log('INCORRECT');
 }
 
-// IF ELSE
+// IF ELSE - - - - - - - - - - - - - - - - - -
 
 const color = 'yellow';
 
@@ -365,7 +365,7 @@ if(color === 'red'){
   console.log('Color is not red or blue');
 }
 
-// LOGICAL OPERATORS
+// LOGICAL OPERATORS - - - - - - - - - - - - - - - - - -
 
 const name = 'Steve';
 const age = 70;
@@ -386,10 +386,10 @@ if(age < 16 || age > 65){
   console.log(`${name} is registered for the race`);
 }
 
-// TERNARY OPERATOR
+// TERNARY OPERATOR - - - - - - - - - - - - - - - - - -
 console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
 
-// WITHOUT BRACES
+// WITHOUT BRACES - - - - - - - - - - - - - - - - - -
 if(id === 100)
   console.log('CORRECT');
 else
@@ -397,4 +397,221 @@ else
 
   // 016 Switches
 
+  let day;
+
+  switch(new Date().getDay()){
+    case 0:
+      day = 'Sunday';
+      break;
+    case 1:
+      day = 'Monday';
+      break;
+    case 2:
+      day = 'Tuesday';
+      break;
+    case 3:
+      day = 'Wednesday';
+      break;
+    case 4:
+      day = 'Thursday';
+      break;
+    case 5:
+      day = 'Friday';
+      break;
+    case 6:
+      day = 'Saturday';
+      break;
+  }
   
+  console.log(`Today is ${day}`);
+
+  // 0XX FUNCTIONS - - - - - - - - - - - - - - - - - -
+  // FUNCTION DECLARATIONS
+
+function greet(firstName = 'John', lastName = 'Doe'){
+  // if(typeof firstName === 'undefined'){firstName = 'John'}
+  // if(typeof lastName === 'undefined'){lastName = 'Doe'}
+  //console.log('Hello');
+  return 'Hello ' + firstName + ' ' + lastName;
+}
+
+// console.log(greet());
+
+// FUNCTION EXPRESIONS - - - - - - - - - - - - - - - - - -
+
+const square = function(x = 3){
+  return x*x;
+};
+
+// console.log(square());
+
+// IMMIDIATLEY INVOKABLE FUNCTION EXPRESSIONS - IIFEs
+
+(function(){
+  console.log('IIFE Ran..');
+})();
+
+(function(name){
+  console.log('Hello '+ name);
+})('Brad');
+
+// PROPERTY METHODS
+
+const todo = {
+  add: function(){
+    console.log('Add todo..');
+  },
+  edit: function(id){
+    console.log(`Edit todo ${id}`);
+  }
+}
+
+todo.delete = function(){
+  console.log('Delete todo...');
+}
+
+todo.add();
+todo.edit(22);
+todo.delete();
+
+//  - - - - - - - - - - - - - - - - - -
+
+// FOR LOOP
+
+for(let i = 0; i < 10; i++){
+  if(i === 2){
+    console.log('2 is my favorite number');
+    continue;
+  }
+
+  if(i === 5){
+    console.log('Stop the loop');
+    break;
+  }
+
+  console.log('Number '+ i);
+}
+
+// WHILE LOOP - - - - - - - - - - - - - - - - - -
+
+let i = 0;
+
+while(i < 10){
+  console.log('Number ' + i);
+  i++;
+}
+
+// DO WHILE
+
+let i = 100;
+
+do {
+  console.log('Number ' + i);
+  i++;
+}
+
+while(i < 10);
+
+// LOOP THROUGH ARRAY - - - - - - - - - - - - - - - - - -
+const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+
+for(let i = 0; i < cars.length; i++){
+  console.log(cars[i]);
+}
+
+// FOREACH - - - - - - - - - - - - - - - - - -
+cars.forEach(function(car){
+  console.log(car);
+}); // use callback/ self-calling function
+
+// OR ...
+cars.forEach(function(car, index, array){
+  console.log(`${index} : ${car}`);
+  console.log(array);
+});
+
+// MAP - - - - - - - - - - - - - - - - - -
+const users  = [
+  {id: 1, name:'John'},
+  {id: 2, name: 'Sara'},
+  {id: 3, name: 'Karen'},
+  {id: 4, name: 'Steve'}
+];
+
+const ids = users.map(function(user){
+  return user.id;
+});
+
+console.log(ids);
+
+
+// FOR IN LOOP - - - - - - - - - - - - - - - - - -
+const user = {
+  firstName: 'John', 
+  lastName: 'Doe',
+  age: 40
+}
+
+for(let x in user){
+  console.log(`${x} : ${user[x]}`);
+}
+
+// WINDOW METHODS / OBJECTS / PROPERTIES
+// Alert
+alert('Hello World');
+
+// Prompt (alert with input)
+const input = prompt();
+alert(input);
+
+// Confirm
+if(confirm('Are you sure')){
+  console.log('YES');
+} else {
+  console.log('NO');
+}
+
+// Outter height and width
+val = window.outerHeight;
+val = window.outerWidth;
+
+// Inner height and width
+val = window.innerHeight;
+val = window.innerWidth;
+
+// Scroll points
+val = window.scrollY; // scroll up-down
+val = window.scrollX; // scroll right-left
+
+// Location Object
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+// Redirect
+window.location.href = 'http://google.com';
+//Reload
+window.location.reload(); // keep reloading the page
+
+// History Object
+window.history.go(-2);
+val = window.history.length;
+
+// Navigator Object
+val = window.navigator;
+val = window.navigator.appName; // always Netscape
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.vendor;
+val = window.navigator.language;
+
+console.log(val);
+
+// Global Scope, Local Scope
+// Function Scope (inside function)
+// Block Scope (inside if ..)
+// 'var' is less secure than 'let'. The value of 'var' in global scope can be changed inside local scope.
+
