@@ -1,4 +1,4 @@
-// 01 Using the console
+```// 01 Using the console
 document.querySelector('h1').style.color = "purple";
 console.log('Hello World!');
 const greeting = "Good Morning";
@@ -615,3 +615,4 @@ console.log(val);
 // Block Scope (inside if ..)
 // 'var' is less secure than 'let'. The value of 'var' in global scope can be changed inside local scope.
 
+ ```
