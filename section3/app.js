@@ -1,8 +1,3 @@
-let val;
+const items = document.querySelectorAll('ul.collection li.collection-item');
 
-val = document;
-val = document.all;
-val = document.all[2];
-val = document.all.length;
-
-console.log(val);
+console.log(items);
